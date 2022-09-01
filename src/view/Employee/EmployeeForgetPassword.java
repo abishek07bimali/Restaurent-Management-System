@@ -238,14 +238,14 @@ public class EmployeeForgetPassword extends JFrame {
 
     public void SendOTP(){
         try{
-            String ACCOUNT_SID = "AC1bf73b3e7fd23f099f5f83dfebab7978";
-            String AUTH_TOKEN = "3b0fe0bcbb00ae7ceeb6b71f91a12435";
+            String ACCOUNT_SID = "SID";
+            String AUTH_TOKEN = "Token";
             Twilio.init(ACCOUNT_SID, AUTH_TOKEN);
             String num = text1.getText();
 
             Message message = Message.creator(
                             new com.twilio.type.PhoneNumber("+977" + num),
-                            new com.twilio.type.PhoneNumber("+12056513866"),
+                            new com.twilio.type.PhoneNumber("phone number"),
 
                             "Your New OTP is : " + pass)
                     .create();
